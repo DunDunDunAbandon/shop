@@ -60,8 +60,14 @@ export default {
         if(!valid) return;
         const { data: res } = await this.$http.post("login",this.loginForm);
         if(res.meta.status!==200)
-          return this.$message.error('登陆失败')
-        this.$message.success('登陆成功')
+          return this.$message.error('登陆失败');
+        this.$message.success('登陆成功');
+        //将登陆成功之后的token保存到客户端的sessionStorage中
+        //项目中除了登录之外的其他API接口必须在登陆之后才能访问
+        //token只应在当前网站打开期间生效，所以保存在sessionStorage中，localStorage是持久化保存
+        window.sessionStorage.setItem("token",res.data.token);
+        //通过编程时导航跳转到后台主页，路由地址是/home
+        this.$router.push("/home");
       })
     }
   }

@@ -1,21 +1,23 @@
-# shop
+# 电商后台管理系统
 
 > A Vue.js project
 
-## Build Setup
+## 登录页面
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# 登录
+后端接口：http://timemeetyou.com:8889/api/private/v1/
+挂载路由导航守卫进行token验证
+element-ui用CDN吧
+# 重置
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```
+## 主页面
+
+``` bash
+#
+
+
+
+```
