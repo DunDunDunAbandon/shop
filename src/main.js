@@ -8,12 +8,17 @@ import axios from 'axios'
 
 //配置请求的根路径
 axios.defaults.baseURL='http://timemeetyou.com:8889/api/private/v1/'
-Vue.prototype.$http=axios
+axios.interceptors.request.use(config=>{
+  console.log(config);
+  config.headers.Authorization=window.sessionStorage.getItem('token');
+  return config;
+})
+Vue.prototype.$http=axios;
 
 // Vue.prototype.$message=message
 Vue.use(ElementUI);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
