@@ -20,3 +20,6 @@ html,body,#app{
   font-size:12px;
 }
 
+.el-pagination{
+  margin-top: 15px;
+}
