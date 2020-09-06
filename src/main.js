@@ -20,6 +20,8 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+// Vue.prototype.$confirm=MessageBox.confirm
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
