@@ -117,7 +117,8 @@
     <el-dialog
       title="分配角色"
       :visible.sync="setRoleDialogVisible"
-      width="50%">
+      width="50%"
+      @close="editDialogClosed">
       <div>
         <p>当前用户：{{userInfo.username}}</p>
         <p>当前角色：{{userInfo.role_name}}</p>
@@ -331,7 +332,7 @@
         this.rolesList=res.data;
         this.setRoleDialogVisible=true
       },
-      //点击按钮分配角色
+      //点击按钮分配角色,这个没做好，老是更新角色失败不知道是不是超级管理员的问题还是后台接口的问题
       async saveRoleInfo(){
         if(!this.selectedRoleId){
           return this.$message.error('请选择要分配的角色！')
@@ -346,6 +347,11 @@
         this.$message.success('更新角色成功！')
         this.getUserList()
         this.setRoleDialogVisible=false
+      },
+      //监听分配角色对话框的关闭事件
+      editDialogClosed(){
+        this.selectedRoleId=''
+        this.userInfo={}
       }
     }
   }
