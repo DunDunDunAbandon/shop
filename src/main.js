@@ -5,6 +5,7 @@ import './assets/css/global.css'/*全局css*/
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
+import TreeTable from 'vue-table-with-tree-grid'
 
 //配置请求的根路径
 axios.defaults.baseURL='http://timemeetyou.com:8889/api/private/v1/'
@@ -19,6 +20,8 @@ Vue.prototype.$http=axios;
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
+
+Vue.component('tree-table',TreeTable)
 
 // Vue.prototype.$confirm=MessageBox.confirm
 
