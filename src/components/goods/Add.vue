@@ -263,7 +263,7 @@
           //商品的名称必须是唯一的
           const {data:res}=await this.$http.post('goods',form)
           if(res.meta.status!==201){
-            return this.$message.error('添加商品失败！')
+            return this.$message.error('添加商品失败！')//这个功能没有完成好，一直是失败
           }
           this.$message.success('添加商品成功！')
           //编程式导航跳转到商品列表页面

@@ -10,6 +10,7 @@ import Cate from '@/components/goods/Cate'
 import Params from '@/components/goods/Params'
 import GoodsList from '@/components/goods/List'
 import Add from '@/components/goods/Add'
+import Order from '@/components/order/Order'
 
 Vue.use(Router)
 
@@ -17,7 +18,7 @@ const router=new Router({
   routes: [
     {
       path:'/',
-      redirect:'/login'
+      redirect:'/login'//重定向
     },
     {
       path: '/login',
@@ -69,6 +70,11 @@ const router=new Router({
           path: '/goods/add',
           name: 'Add',
           component: Add
+        },
+        {
+          path: '/orders',
+          name: 'Order',
+          component: Order
         }
       ]
     }

@@ -13,6 +13,14 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
+//导入timeline
+import Timeline from './plugins/timeline/index.js'
+import TimelineItem from './plugins/timeline-item/index.js'
+//注册为全局可的组件
+Vue.use(Timeline)
+Vue.use(TimelineItem)
+
+
 //配置请求的根路径
 axios.defaults.baseURL='http://timemeetyou.com:8889/api/private/v1/'
 axios.interceptors.request.use(config=>{
