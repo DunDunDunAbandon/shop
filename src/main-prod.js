@@ -2,16 +2,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/css/global.css'/*全局css*/
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+// import ElementUI from 'element-ui'
+// import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import TreeTable from 'vue-table-with-tree-grid'
 //导入富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
 //导入富文本编辑器对应的样式
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+// import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.snow.css'
+// import 'quill/dist/quill.bubble.css'
 
 //导入timeline
 import Timeline from './plugins/timeline/index.js'
@@ -22,7 +22,7 @@ Vue.use(TimelineItem)
 
 //导入NProgress包对应的JS和CSS
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+// import 'nprogress/nprogress.css'
 
 
 //配置请求的根路径
